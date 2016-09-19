@@ -96,7 +96,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<p id="init-lacking">Apologies! You are using an <strong>outdated</strong> browser which lacks required capabilities. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<p id="init-loading">Initializing. Please wait&hellip;<br /><progress></progress></p>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="Rainstorm" startnode="11" creator="Twine" creator-version="2.0.11" ifid="9F8470A5-6D6A-49B6-8979-EC72CC2014DD" format="SugarCube 2 (local/offline)" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/*Loading a special font.*/
+	<div id="store-area" hidden><tw-storydata name="Rainstorm" startnode="1" creator="Twine" creator-version="2.0.11" ifid="9F8470A5-6D6A-49B6-8979-EC72CC2014DD" format="SugarCube 2 (local/offline)" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/*Loading a special font.*/
 @import 'https://fonts.googleapis.com/css?family=Asul';
 
 /*1. The following CSS affects the format in the first passage.*/
@@ -369,6 +369,8 @@ padding-right:10px;
 
 
 
+
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">//Removing the sidebar in Sugarcube 2 with this code.
 
 $('#ui-bar').remove();
@@ -434,6 +436,8 @@ window.showMessage= function()
 
 
 
+
+
 </script><tw-passagedata pid="1" name="Rainstorm" tags="start" position="149,15">&lt;&lt;audio &quot;loseGame&quot; stop&gt;&gt;
 &lt;&lt;audio &quot;winGame&quot; stop&gt;&gt;
 &lt;div id=&quot;title&quot;&gt;
@@ -451,13 +455,13 @@ Click [[start|introduction]] to begin the story!
 &lt;&lt;audio &quot;gameBegin&quot; loop play&gt;&gt;
 
 </tw-passagedata>
-<tw-passagedata pid="2" name="introduction" tags="" position="149,159">&lt;&lt;audio &quot;gameBegin&quot; fadeout&gt;&gt;
+<tw-passagedata pid="2" name="introduction" tags="" position="148,159">&lt;&lt;audio &quot;gameBegin&quot; fadeout&gt;&gt;
 &lt;&lt;audio &quot;indoorBackground&quot; fadein loop play&gt;&gt;
 &lt;div class=&quot;narrative&quot;&gt;
 As global climate is getting warmer, one result of climate change is more frequent and intense extreme weather events，such as rainstorm and drought.
 In your city, the heavy rain has been lasting for 12 days, which leads to a flood disaster going to submerge the city. The only part of the city that would not be inundated in the flood is a highland in northeast direction of the city.
 Of course you don&#39;t want to drown in the disaster. In order to survive, you need to arrive at the highland within one hour.
-&lt;&lt;timed 1s t8n&gt;&gt;
+&lt;&lt;timed 1s t8n&gt;&gt;&lt;&lt;audio &quot;alertSound&quot; volume 1 fadeoverto 10 0&gt;&gt;
 [[Go to the highland immediately.|setout]]
 [[Look for a useful tool first.|map]]
 &lt;&lt;/timed&gt;&gt;
@@ -465,7 +469,7 @@ Of course you don&#39;t want to drown in the disaster. In order to survive, you 
 &lt;img class=&quot;visual&quot; src=&quot;image/introduction.jpg&quot; /&gt;
 
 </tw-passagedata>
-<tw-passagedata pid="3" name="setout" tags="" position="149,315">&lt;&lt;set $time to $time + 10&gt;&gt;&lt;&lt;audio &quot;doorOpen&quot; play&gt;&gt;
+<tw-passagedata pid="3" name="setout" tags="" position="149,315">&lt;&lt;set $time to $time + 10&gt;&gt;&lt;&lt;audio &quot;alertSound&quot; stop&gt;&gt;&lt;&lt;audio &quot;doorOpen&quot; play&gt;&gt;
 &lt;div class=&quot;narrative&quot;&gt;
 Obviously, you are so scared of the flood and you attempt to escape as soon as possible. However, when you open the door and get outside, you find the rain is coming down, and the wind is blowing. The rainstorm is too heavey that you hardly can see ahead clearly. Failing to recognize the right direction to hignland, you have to go back to your house and get a map. The turnover wates your 10 mins.
 
@@ -473,7 +477,7 @@ Obviously, you are so scared of the flood and you attempt to escape as soon as p
 &lt;/div&gt;
 &lt;div id=&quot;footArea&quot;&gt;&lt;&lt;display Foot&gt;&gt;&lt;/div&gt;
 &lt;img class=&quot;visual&quot; src=&quot;image/goback.jpg&quot; /&gt;</tw-passagedata>
-<tw-passagedata pid="4" name="map" tags="" position="282,161">&lt;&lt;audio &quot;indoorBackground&quot; fadeout&gt;&gt;
+<tw-passagedata pid="4" name="map" tags="" position="281,162">&lt;&lt;audio &quot;indoorBackground&quot; fadeout&gt;&gt;&lt;&lt;audio &quot;alertSound&quot; stop&gt;&gt;
 &lt;&lt;audio &quot;roomSound&quot; fadein loop play&gt;&gt;
 &lt;&lt;set $time to $time + 10&gt;&gt;&lt;&lt;set $mapGot to true&gt;&gt;
 &lt;div class=&quot;narrativeTwo&quot;&gt;
@@ -502,7 +506,7 @@ Rummaging through your house looking for useful tools 10 mins, you finally find 
 &lt;div id=&quot;footArea&quot;&gt;&lt;&lt;display Foot&gt;&gt;&lt;/div&gt;
 
 &lt;img class=&quot;map&quot; src=&quot;image/mapone.jpg&quot; /&gt;</tw-passagedata>
-<tw-passagedata pid="5" name="Right" tags="" position="440,317">&lt;&lt;set $time to $time + 10&gt;&gt;&lt;&lt;audio &quot;outBackground&quot; fadein loop play&gt;&gt;
+<tw-passagedata pid="5" name="Right" tags="" position="440,317">&lt;&lt;set $time to $time + 10&gt;&gt;&lt;&lt;audio &quot;outBackground&quot; loop play volume 0.7&gt;&gt;
 &lt;div class=&quot;narrative&quot;&gt;
 With the flood chaseing after you behind, you have to rush ahead even if you get tired after walking in the rainstorm for ten minutes. At this time, you find a bag containning some breads in it left on the road. Eating breads can replenish your strength. Having been too tired to count the owner in such a emergency, you can take a rest and enjoy these breads.
 
@@ -537,7 +541,7 @@ showMessage();
 
 
 </tw-passagedata>
-<tw-passagedata pid="6" name="Middle" tags="" position="505,165">&lt;&lt;set $time to $time + 10&gt;&gt;&lt;&lt;audio &quot;outBackground&quot; fadein loop play&gt;&gt;
+<tw-passagedata pid="6" name="Middle" tags="" position="505,165">&lt;&lt;set $time to $time + 10&gt;&gt;&lt;&lt;audio &quot;outBackground&quot; loop play volume 0.7&gt;&gt;
 &lt;div class=&quot;narrative&quot;&gt;
 You feel exhausted after walking ten minutes in the rainstorm. But $yourName, you have to presist before you reach the desitination because you don&#39;t feel like to drown in the flood. At this time, you find a bag with a broken light in it. You can pick it up and take a while to fix it. A light is valubale in a dark rainstrom day. Then where do you want to go next?
 
@@ -573,7 +577,7 @@ showMessage();
 
 
 </tw-passagedata>
-<tw-passagedata pid="7" name="Left" tags="" position="439,35">&lt;&lt;set $time to $time + 10&gt;&gt;&lt;&lt;audio &quot;outBackground&quot; fadein loop play&gt;&gt;
+<tw-passagedata pid="7" name="Left" tags="" position="440,35">&lt;&lt;set $time to $time + 10&gt;&gt;&lt;&lt;audio &quot;outBackground&quot; loop play volume 0.7&gt;&gt;
 &lt;div class=&quot;narrative&quot;&gt;
 Walking in the rainstorm even ten minutes can make you feel tired. Even thought you must presist before you reach the desitination because you don&#39;t want to drown in the flood. At this time, you find a Medical Kit laying on the road, which might be left by a mobile medical team in chaos. You think :
 &quot;A medical kit is always helpful in an emergency.&quot;  
@@ -609,7 +613,7 @@ showMessage();
 
 
 </tw-passagedata>
-<tw-passagedata pid="8" name="hungry" tags="" position="688,164">&lt;div class=&quot;narrativeTwo&quot;&gt;
+<tw-passagedata pid="8" name="hungry" tags="" position="687,164">&lt;div class=&quot;narrativeTwo&quot;&gt;&lt;&lt;audio &quot;trackingTime&quot; play&gt;&gt;
 On the way to the highland, you need to climb a steep slope. But you barely have enery to uphill because you have walked throught the rainstorm for a long time and got hungry.
 /*giving chances for players to choice if they want to use the item and save time.*/
 &lt;&lt;nobr&gt;&gt;
@@ -619,7 +623,7 @@ On the way to the highland, you need to climb a steep slope. But you barely have
 &lt;&lt;replace #useItemChoice&gt;&gt;
 &lt;&lt;if $bread is false&gt;&gt;
 Sorry, you didn&#39;t get a bread. The steep slope takes you a long time to get through.
-&lt;&lt;set $time to $time+10&gt;&gt;
+&lt;&lt;set $time to $time+15&gt;&gt;
 &lt;&lt;else&gt;&gt;
 After eat the bread, you have enough energy to uphill quickly. The wise choice to take the bread helps you save 5 mins.
 &lt;&lt;set $time to $time+5&gt;&gt;
@@ -638,13 +642,13 @@ After eat the bread, you have enough energy to uphill quickly. The wise choice t
 &lt;div id=&quot;footArea&quot;&gt;&lt;&lt;display Foot&gt;&gt;&lt;/div&gt;
 
 &lt;img class=&quot;map&quot; src=&quot;image/maptwo.jpg&quot; /&gt;</tw-passagedata>
-<tw-passagedata pid="9" name="fog" tags="" position="816,166">&lt;div class=&quot;narrativeTwo&quot;&gt;
+<tw-passagedata pid="9" name="fog" tags="" position="817,167">&lt;div class=&quot;narrativeTwo&quot;&gt;&lt;&lt;audio &quot;trackingTime&quot; play&gt;&gt;
 &lt;&lt;if $light is true&gt;&gt;
 As the rain become more and more heavy, it&#39;s really hard to find the right direction ahead. Luckily, you have picked up a light and fixed it. Now you can turn the light on and light up the floor in front of you. With light at hand, you unconsciously redoubled your pace.
 &lt;&lt;set $time to $time+5&gt;&gt;
 &lt;&lt;else&gt;&gt;
 As the rain become more and more heavy, it&#39;s really hard to find the right direction ahead. Unfortunately, you don&#39;t have any tool that can help you. Thus, you have to spend a long while to recognize the right way and you unconsciously slow down your step.
-&lt;&lt;set $time to $time+10&gt;&gt;
+&lt;&lt;set $time to $time+15&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
 /*giving chances for players to get other items but not repeat*/
@@ -671,7 +675,7 @@ You have collected all the items in the way.
 &lt;div id=&quot;footArea&quot;&gt;&lt;&lt;display Foot&gt;&gt;&lt;/div&gt;
 
 &lt;img class=&quot;map&quot; src=&quot;image/mapthree.jpg&quot; /&gt;</tw-passagedata>
-<tw-passagedata pid="10" name="hurt" tags="" position="817,325">&lt;div class=&quot;narrativeTwo&quot;&gt;
+<tw-passagedata pid="10" name="hurt" tags="" position="817,325">&lt;div class=&quot;narrativeTwo&quot;&gt;&lt;&lt;audio &quot;trackingTime&quot; play&gt;&gt;
 You are approaching the destination with only the woods in the front. After walking through the woods, you can see the highland waiting for you ahead not far away. However, in the woods, a lot of tree branches cracked under the weight of the rain. Branches and other litter are everywhere on the road, which is hard to get through.
 
 &lt;&lt;nobr&gt;&gt;
@@ -686,7 +690,7 @@ Luchily, you have the light and you can turn it on and easily avoid hurt. You ca
 Unluckly, you get hurd by the braches. But you have a medical kit. You open the kit and find some bandages to cover the cut. Although it takes you some time but you finally go through the woods.
 &lt;&lt;set $time to $time+10&gt;&gt;
 &lt;&lt;else&gt;&gt;
-Unluckly, you get hurt by the braches and you fail to any useful tools that can help you. The cut is very hurt and you have to slow down your speed.
+Unluckly, you get hurt by the braches and you fail to find any useful tools that can help you. The cut is very hurt and you have to slow down your speed.
 &lt;&lt;set $time to $time+15&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;br&gt;
@@ -702,8 +706,8 @@ Unluckly, you get hurt by the braches and you fail to any useful tools that can 
 &lt;div id=&quot;footArea&quot;&gt;&lt;&lt;display Foot&gt;&gt;&lt;/div&gt;
 
 &lt;img class=&quot;map&quot; src=&quot;image/mapfour.jpg&quot; /&gt;</tw-passagedata>
-<tw-passagedata pid="11" name="final" tags="" position="810,458">&lt;&lt;audio &quot;roomSound&quot; stop&gt;&gt;
-&lt;&lt;audio &quot;outBackground&quot; stop&gt;&gt;
+<tw-passagedata pid="11" name="final" tags="" position="811,459">&lt;&lt;audio &quot;roomSound&quot; stop&gt;&gt;
+&lt;&lt;audio &quot;outBackground&quot; stop&gt;&gt;&lt;&lt;audio &quot;trackingTime&quot; stop&gt;&gt;
 &lt;&lt;timed 1.5s t8n&gt;&gt;&lt;div id=&quot;resultsText&quot;&gt;
 &lt;&lt;if $time &gt; 60 &gt;&gt;
   &lt;div id=&quot;results&quot;&gt;
@@ -712,7 +716,8 @@ Fail
   &lt;/div&gt;
   &lt;div id=&quot;resultsInfro&quot;&gt;
 $yourName, you spend $time mins get to the hightland.
-Sorry, You wasted so much time in the way to collect these items. Unfortunately, the flood had inundated the whole district before you arrived at the highland, so you drown in floods. 
+Sorry, You wasted so much time in the way. Unfortunately, the flood had inundated the whole district before you arrived at the highland, so you drown in floods. 
+
 [[Restart|Rainstorm]]
  &lt;/div&gt;
 &lt;&lt;else&gt;&gt;
@@ -758,7 +763,9 @@ Changing a light bulb, powering down electronics, using less water, and recyclin
 &lt;&lt;cacheaudio &quot;loseGame&quot; &quot;music/Losegame-sound.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;winGame&quot; &quot;music/Wingame.mp3&quot;&gt;&gt;
 &lt;&lt;cacheaudio &quot;gameBegin&quot; &quot;music/Gamebegin-sound-effect.mp3&quot;&gt;&gt;
-&lt;&lt;cacheaudio &quot;outBackground&quot; &quot;music/OutdoorThunderstorm.mp3&quot;&gt;&gt;</tw-passagedata>
+&lt;&lt;cacheaudio &quot;outBackground&quot; &quot;music/OutdoorThunderstorm.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;alertSound&quot; &quot;music/alertsound.mp3&quot;&gt;&gt;
+&lt;&lt;cacheaudio &quot;trackingTime&quot; &quot;music/trackingTime.mp3&quot;&gt;&gt;</tw-passagedata>
 <tw-passagedata pid="13" name="Foot" tags="" position="312,447">&lt;&lt;nobr&gt;&gt;
 /*I&#39;m using this passage as a footer, to display the player status.  I&#39;m displaying it on every passage of the story.*/
 
