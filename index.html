@@ -96,7 +96,7 @@ var saveAs=saveAs||navigator.msSaveBlob&&navigator.msSaveBlob.bind(navigator)||f
 		<p id="init-lacking">Apologies! You are using an <strong>outdated</strong> browser which lacks required capabilities. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
 		<p id="init-loading">Initializing. Please wait&hellip;<br /><progress></progress></p>
 	</div>
-	<div id="store-area" hidden><tw-storydata name="Rainstorm" startnode="1" creator="Twine" creator-version="2.0.11" ifid="9F8470A5-6D6A-49B6-8979-EC72CC2014DD" format="SugarCube 2 (local/offline)" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/*1. The following CSS affects the format in the first passage.*/
+	<div id="store-area" hidden><tw-storydata name="Rainstorm" startnode="11" creator="Twine" creator-version="2.0.11" ifid="9F8470A5-6D6A-49B6-8979-EC72CC2014DD" format="SugarCube 2 (local/offline)" options="" hidden><style role="stylesheet" id="twine-user-stylesheet" type="text/twine-css">/*1. The following CSS affects the format in the first passage.*/
 .start{
 background: [img[image/backgroudstart.jpg]] fixed;
 position: relative;
@@ -354,6 +354,7 @@ height:450px;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">//Removing the sidebar in Sugarcube 2 with this code.
 
 $('#ui-bar').remove();
@@ -404,6 +405,7 @@ window.showMessage= function()
    messageArea.innerHTML= "You have collected the item.";
 	 	 
 };
+
 
 
 
@@ -673,7 +675,7 @@ Unluckly, you get hurt by the braches. The cut is very hurt and you have to slow
 &lt;div id=&quot;footArea&quot;&gt;&lt;&lt;display Foot&gt;&gt;&lt;/div&gt;
 
 &lt;img class=&quot;map&quot; src=&quot;image/mapfour.jpg&quot; /&gt;</tw-passagedata>
-<tw-passagedata pid="11" name="final" tags="" position="811,457">&lt;&lt;audio &quot;roomSound&quot; stop&gt;&gt;
+<tw-passagedata pid="11" name="final" tags="" position="810,457">&lt;&lt;audio &quot;roomSound&quot; stop&gt;&gt;
 &lt;&lt;audio &quot;outBackground&quot; stop&gt;&gt;
 &lt;&lt;timed 1.5s t8n&gt;&gt;&lt;div id=&quot;resultsText&quot;&gt;
 &lt;&lt;if $time &gt; 60 &gt;&gt;
@@ -684,6 +686,7 @@ Fail.
   &lt;div id=&quot;resultsInfro&quot;&gt;
 $yourName, you spend $time mins get to the hightland.
 Sorry, You wasted so much time in the way to collect these items. Unfortunately, the flood had inundated the whole district before you arrived at the highland, so you drown in floods. 
+[[Restart|Rainstorm]]
  &lt;/div&gt;
 &lt;&lt;else&gt;&gt;
 &lt;div id=&quot;results&quot;&gt;
@@ -693,13 +696,17 @@ Success.
 &lt;div id=&quot;resultsInfro&quot;&gt;
 $yourName, you spend $time mins get to the hightland.
 Congraduations! You have arrived the highland on time so that you survive in the disaster. You calmly keep balance between collecting items and saving time in an emergency.
+[[Restart|Rainstorm]]
 &lt;/div&gt;
 &lt;&lt;/if&gt;&gt;
+
 &lt;/div&gt;
 &lt;&lt;next&gt;&gt;&lt;div id=&quot;finalInfro&quot;&gt;
 Obviously, you would not want the same senario to happen in the real life. But currently, human-caused climate warming has increased the chances of the torrential rains that unleashed devastating floods. According to NASA&#39;s reports, global sea level has risen by about 8 inches since reliable record keeping began in 1880. In the next several decades, storm surges and high tides could combine with sea level rise and land subsidence to further increase flooding in many regions. 
 What can you do to make a change?
-Changing a light bulb, powering down electronics, using less water, and recycling. Simple actions are helpful to reduce emissions and protect the climate. Take action today! Small steps add up, if we all do our part.&lt;/div&gt;&lt;&lt;/timed&gt;&gt;
+Changing a light bulb, powering down electronics, using less water, and recycling. Simple actions are helpful to reduce emissions and protect the climate. Take action today! Small steps add up, if we all do our part.
+&lt;/div&gt;
+&lt;&lt;/timed&gt;&gt;
 &lt;&lt;if $time &gt; 60 &gt;&gt;
 &lt;img class=&quot;visual&quot; src=&quot;image/lose.jpg&quot;/&gt;
 &lt;&lt;else&gt;&gt;
@@ -754,6 +761,7 @@ Changing a light bulb, powering down electronics, using less water, and recyclin
 
 
 </tw-passagedata>
+<tw-passagedata pid="14" name="start" tags="" position="811,607">Double-click this passage to edit it.</tw-passagedata>
 </tw-storydata>
 </div>
 	<script id="script-sugarcube" type="text/javascript">
