@@ -206,7 +206,7 @@ height:480px;
 position:absolute;
 top:550px;
 left:50px;	
-width:800px;
+width:870px;
 height:150px;
 border-style: solid; border-width: 5px;
 border-color: rgb(143,207,236);
@@ -231,7 +231,7 @@ text-align:center;
 position:absolute;
 left: 80px;
 top: 0px;
-width:150px;
+width:220px;
 height:30px
 font-size:16px;
 color: #FFF;
@@ -246,7 +246,7 @@ border-color: rgb(143,207,236);
 
 #itemArea{
 position:absolute;
-left: 233px;
+left: 303px;
 top: 0px;
 width:567px;
 height:30px;
@@ -273,8 +273,8 @@ height:120px;
 border-right-style: solid;
 border-color: rgb(143,207,236);
 border-width: 3px;	
-padding-right: 15px;
-padding-left: 15px;
+padding-right: 50px;
+padding-left: 50px;
 }
 
 
@@ -371,6 +371,7 @@ padding-right:10px;
 
 
 
+
 </style><script role="script" id="twine-user-script" type="text/twine-javascript">//Removing the sidebar in Sugarcube 2 with this code.
 
 $('#ui-bar').remove();
@@ -438,6 +439,7 @@ window.showMessage= function()
 
 
 
+
 </script><tw-passagedata pid="1" name="Rainstorm" tags="start" position="149,15">&lt;&lt;audio &quot;loseGame&quot; stop&gt;&gt;
 &lt;&lt;audio &quot;winGame&quot; stop&gt;&gt;
 &lt;div id=&quot;title&quot;&gt;
@@ -477,7 +479,7 @@ Obviously, you are so scared of the flood and you attempt to escape as soon as p
 &lt;/div&gt;
 &lt;div id=&quot;footArea&quot;&gt;&lt;&lt;display Foot&gt;&gt;&lt;/div&gt;
 &lt;img class=&quot;visual&quot; src=&quot;image/goback.jpg&quot; /&gt;</tw-passagedata>
-<tw-passagedata pid="4" name="map" tags="" position="281,162">&lt;&lt;audio &quot;indoorBackground&quot; fadeout&gt;&gt;&lt;&lt;audio &quot;alertSound&quot; stop&gt;&gt;
+<tw-passagedata pid="4" name="map" tags="" position="281,163">&lt;&lt;audio &quot;indoorBackground&quot; fadeout&gt;&gt;&lt;&lt;audio &quot;alertSound&quot; stop&gt;&gt;
 &lt;&lt;audio &quot;roomSound&quot; fadein loop play&gt;&gt;
 &lt;&lt;set $time to $time + 10&gt;&gt;&lt;&lt;set $mapGot to true&gt;&gt;
 &lt;div class=&quot;narrativeTwo&quot;&gt;
@@ -623,7 +625,7 @@ On the way to the highland, you need to climb a steep slope. But you barely have
 &lt;&lt;replace #useItemChoice&gt;&gt;
 &lt;&lt;if $bread is false&gt;&gt;
 Sorry, you didn&#39;t get a bread. The steep slope takes you a long time to get through.
-&lt;&lt;set $time to $time+15&gt;&gt;
+&lt;&lt;set $time to $time+10&gt;&gt;
 &lt;&lt;else&gt;&gt;
 After eat the bread, you have enough energy to uphill quickly. The wise choice to take the bread helps you save 5 mins.
 &lt;&lt;set $time to $time+5&gt;&gt;
@@ -648,7 +650,7 @@ As the rain become more and more heavy, it&#39;s really hard to find the right d
 &lt;&lt;set $time to $time+5&gt;&gt;
 &lt;&lt;else&gt;&gt;
 As the rain become more and more heavy, it&#39;s really hard to find the right direction ahead. Unfortunately, you don&#39;t have any tool that can help you. Thus, you have to spend a long while to recognize the right way and you unconsciously slow down your step.
-&lt;&lt;set $time to $time+15&gt;&gt;
+&lt;&lt;set $time to $time+10&gt;&gt;
 &lt;&lt;/if&gt;&gt;
 &lt;&lt;nobr&gt;&gt;
 /*giving chances for players to get other items but not repeat*/
@@ -772,7 +774,7 @@ Changing a light bulb, powering down electronics, using less water, and recyclin
 &lt;div id=&quot;menu&quot;&gt;MENU&lt;/div&gt;
 
 &lt;div id=&quot;categary&quot;&gt;
-&lt;div id= &quot;checkTime&quot;&gt;Check Your Time&lt;/div&gt;
+&lt;div id= &quot;checkTime&quot;&gt;Check Your Time: $time mins&lt;/div&gt;
 &lt;div id=&quot;itemArea&quot; &gt;You Have Got&lt;/div&gt;
 &lt;/div&gt;
 
